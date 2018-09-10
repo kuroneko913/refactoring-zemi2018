@@ -28,12 +28,7 @@ class Customer {
     String result = "Rental Record for " + getName() + "\n";
 
     for(Rental rental : _rentals){
-      frequentRenterPoints ++;
-      if((rental.getMovie().getPriceCode() == Movie.NEW_RELEASE) &&
-          rental.getDaysRented() > 1){
-        frequentRenterPoints ++;
-      }
-
+      frequentRenterPoints += rental.getFrequentRenterPoints();
       result += "\t" + rental.getMovie().getTitle() + "\t" +
                 String.valueOf(rental.getCharge()) + "\n";
       totalAmount += rental.getCharge();
