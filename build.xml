@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<project name="refactoringZemi" default="run" basedir="./">
+  <property name="cls_dir" value="class" />
+  <property name="src_dir" value="src/main" />
+  <property name="Main" value="Main" />
+
+  <!-- パッケージ名 -->
+  <property name="package" value="org.speech_lab.refactoring_zemi2018.chapter1" />
+
+  <target name="run" depends="compile">
+	<java classname="${package}.${Main}" classpath="${cls_dir}" fork="yes" />
+  </target>
+
+  <target name="compile" depends="delete">
+    <mkdir dir="${cls_dir}" />
+    <javac srcdir="${src_dir}" destdir="${cls_dir}" includeantruntime="false" encoding="utf-8"/>
+  </target>
+
+  <target name="delete">
+    <delete dir="${cls_dir}" />
+  </target>
+</project>
