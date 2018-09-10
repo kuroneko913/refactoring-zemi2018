@@ -36,6 +36,24 @@ class Customer {
     return result;
   }
 
+  public String htmlStatement(){
+    // テキストの想定HTMLがおそらく古いので改変。
+    // テキストの想定するpタグの使用法がよくわからない。誤植の可能性あり。
+    String result = "<h1>Rentals for <em>" + getName() + "</em></h1>\n";
+
+    for(Rental rental : _rentals){
+      result += "<p>" + rental.getMovie().getTitle() + ": " +
+                String.valueOf(rental.getCharge()) + "</p>\n";
+    }
+
+    result += "<p>You owe <em>" + String.valueOf(getTotalCharge()) + "</em></p>\n";
+    result += "<p>On this rental you earned <em>" +
+              String.valueOf(getTotalFrequentRenterPoints()) +
+              "</em> frequent renter points</p>";
+
+    return result;
+  }
+
   private double getTotalCharge(){
     double result = 0;
     for(Rental rental : _rentals){
