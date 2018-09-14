@@ -3,10 +3,17 @@
 <project name="refactoringZemi" default="run" basedir="./">
   <property name="cls_dir" value="class" />
   <property name="src_dir" value="src/main" />
+  <property name="test_dir" value="src/test" />
   <property name="Main" value="Main" />
 
   <!-- パッケージ名 -->
   <property name="package" value="org.speech_lab.refactoring_zemi2018.chapter1" />
+
+  <property name="test_classname" value="${package}.CustomerTest" />
+  <path id="classpath">
+    <pathelement path="${cls_dir}"/>
+    <pathelement location="lib/junit-4.10.jar"/>
+  </path>
 
   <target name="run" depends="compile">
 	<java classname="${package}.${Main}" classpath="${cls_dir}" fork="yes" />
@@ -15,6 +22,17 @@
   <target name="compile" depends="delete">
     <mkdir dir="${cls_dir}" />
     <javac srcdir="${src_dir}" destdir="${cls_dir}" includeantruntime="false" encoding="utf-8"/>
+    <javac srcdir="${test_dir}" destdir="${cls_dir}" includeantruntime="false" encoding="utf-8">
+      <classpath refid="classpath" />
+    </javac>
+  </target>
+
+  <target name="test" depends="compile">
+    <junit fork="yes" haltonfailure="yes">
+        <test name="${test_classname}" />
+        <formatter type="plain" usefile="false" />
+        <classpath refid="classpath" />
+    </junit>
   </target>
 
   <target name="delete">
