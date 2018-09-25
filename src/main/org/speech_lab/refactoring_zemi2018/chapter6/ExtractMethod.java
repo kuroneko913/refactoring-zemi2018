@@ -8,5 +8,9 @@ public class ExtractMethod {
 	hiroki.addOrder(new Order(23.0));
 
 	hiroki.printOwing();
+
+	Sales monster = new Sales(200, 4);
+	System.out.println();
+	System.out.println("Price: " + monster.getPrice());
     }
 }
