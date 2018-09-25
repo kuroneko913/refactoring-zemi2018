@@ -11,6 +11,11 @@ public class ExtractMethod {
 
 	Sales monster = new Sales(200, 4);
 	System.out.println();
-	System.out.println("Price: " + monster.getPrice());
+	System.out.println("Price (monster): " + monster.getPrice());
+
+	Sales pen = new Sales(80, 1000);
+	System.out.println();
+	System.out.println("Bulk price (pen): " + pen.getPrice());
+	
     }
 }
