@@ -15,13 +15,16 @@ public class Customer {
 		_orders.add(arg);
     }
 
+	public void printBanner() {
+		System.out.println("**************************");
+		System.out.println("***** Customer Owes ******");
+		System.out.println("**************************");		
+	}
+
     void printOwing() {
 		double outstanding = 0.0;
 
-		// バナーの印刷
-		System.out.println("**************************");
-		System.out.println("***** Customer Owes ******");
-		System.out.println("**************************");
+		printBanner();
 
 		// 未払金の計算
 		for(Order each: _orders) {
