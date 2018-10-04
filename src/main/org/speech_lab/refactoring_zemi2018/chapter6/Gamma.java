@@ -17,18 +17,21 @@ class Gamma {
 		importantValue2 = (inputVal * yearToDate) + 100;
 
 		// same process (1)
-		if((yearToDate - importantValue1) > 100) 
-			importantValue2 -= 20;
+		importantThing();
 
 		importantValue2 *= 11;
 		importantValue2 /= 10;
 
 		// same process (2)
-		if((yearToDate - importantValue1) > 100) 
-			importantValue2 -= 20;
+		importantThing();
 
 		importantValue3 = importantValue2 * 7;
 
 		return importantValue3 - 2 * importantValue1;		
+	}
+
+	private void importantThing() {
+		if((yearToDate - importantValue1) > 100) 
+			importantValue2 -= 20;
 	}
 }
