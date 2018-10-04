@@ -25,12 +25,16 @@ class Sales {
 		}
 	}
 
+	private double calcQuantityDiscount() {
+		return Math.max(0, _quantity - 500) * _itemPrice * 0.05;
+	}
+
+	private double calcShipping() {
+		return Math.min(_quantity * _itemPrice * 0.1, 100.0);
+	}
+
     double price() {
 		// 価格(price)は、基本価格(base price) - 数量割引(quantity) + 送料(shipping)
-		final int basePrice = _quantity * _itemPrice;
-		final double quantityDiscount = Math.max(0, _quantity - 500) * _itemPrice * 0.05;
-		final double shipping = Math.min(_quantity * _itemPrice * 0.1, 100.0);
-		
-		return basePrice - quantityDiscount + shipping;
+		return calcBasePrice() - calcQuantityDiscount() + calcShipping();
     }
 }
