@@ -10,7 +10,7 @@ class Sales {
     }
 
     double getPrice() {
-		final int basePrice = basePrice();
+		final int basePrice = calcBasePrice();
 		final double discountFactor;
 		if(basePrice > 1000)
 			discountFactor = 0.95;
@@ -19,7 +19,7 @@ class Sales {
 		return basePrice * discountFactor;
     }
 
-	private int basePrice() {
+	private int calcBasePrice() {
 		return _quantity * _itemPrice;
 	}
 
