@@ -10,7 +10,7 @@ class Sales {
     }
 
     double getPrice() {
-		final int basePrice = _quantity * _itemPrice;
+		final int basePrice = basePrice();
 		final double discountFactor;
 		if(basePrice > 1000)
 			discountFactor = 0.95;
@@ -18,6 +18,10 @@ class Sales {
 			discountFactor = 0.98;
 		return basePrice * discountFactor;
     }
+
+	private int basePrice() {
+		return _quantity * _itemPrice;
+	}
 
     double price() {
 		// 価格(price)は、基本価格(base price) - 数量割引(quantity) + 送料(shipping)
