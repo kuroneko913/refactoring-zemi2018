@@ -16,20 +16,35 @@ public class Customer {
     }
 
     void printOwing() {
-	double outstanding = 0.0;
+	
 
+	printBanner();
+
+	double outstanding = getOutstanding();
+
+	printDetails(outstanding);
+    }
+
+    void printBanner(){
 	// バナーの印刷
 	System.out.println("**************************");
 	System.out.println("***** Customer Owes ******");
 	System.out.println("**************************");
+    }
 
+    void printDetails(double outstanding){
+	// 明細の印刷
+	System.out.println("name: " + _name);
+	System.out.println("amount: " + outstanding);	// 未払金の計算
+    }
+
+    double getOutstanding(){
 	// 未払金の計算
+	double outstanding = 0.0;
 	for(Order each: _orders) {
 	    outstanding += each.getAmount();
 	}
-
-	// 明細の印刷
-	System.out.println("name: " + _name);
-	System.out.println("amount: " + outstanding);
+	return outstanding;
     }
+	
 }
