@@ -17,5 +17,12 @@ public class ExtractMethod {
 	System.out.println();
 	System.out.println("Bulk price (pen): " + pen.getPrice());
 	
+	Body haggis = new Body(0.5, 100.0, 50.0, 0.2);
+	System.out.println();
+	System.out.println("Distance: " + haggis.getDistanceTravelled(0.5));
+
+	Account account = new Account(100);
+	System.out.println();
+	System.out.println("gamma: " + account.gamma(2, 10, 5));
     }
 }
