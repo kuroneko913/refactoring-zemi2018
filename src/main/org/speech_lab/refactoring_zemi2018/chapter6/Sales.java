@@ -10,17 +10,19 @@ class Sales {
     }
 
     double getPrice() {
-		final int basePrice = calcBasePrice();
-		final double discountFactor;
-		if(basePrice > 1000)
-			discountFactor = 0.95;
-		else
-			discountFactor = 0.98;
-		return basePrice * discountFactor;
+		return calcBasePrice() * calcDiscountFactor();
     }
 
 	private int calcBasePrice() {
 		return _quantity * _itemPrice;
+	}
+
+	private double calcDiscountFactor() {
+		if (calcBasePrice() > 1000) {
+			return 0.95;
+		} else {
+			return 0.98;
+		}
 	}
 
     double price() {
