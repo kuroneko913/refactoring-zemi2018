@@ -26,17 +26,19 @@ public class Customer {
 		System.out.println("amount: " + outstanding);		
 	}
 
+	double getOutstanding() {
+		double result = 0.0;
+
+		for (Order each: _orders) {
+			result += each.getAmount();
+		}
+		return result;
+	}
+
     void printOwing() {
-		double outstanding = 0.0;
+		double outstanding = getOutstanding();
 
 		printBanner();
-
-		// 未払金の計算
-		for(Order each: _orders) {
-			outstanding += each.getAmount();
-		}
-
 		printDetails(outstanding);
-
     }
 }
