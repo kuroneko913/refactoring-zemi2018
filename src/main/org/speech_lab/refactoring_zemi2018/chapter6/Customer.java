@@ -15,10 +15,15 @@ public class Customer {
 		_orders.add(arg);
     }
 
-	public void printBanner() {
+	void printBanner() {
 		System.out.println("**************************");
 		System.out.println("***** Customer Owes ******");
 		System.out.println("**************************");		
+	}
+
+	void printDetails(double outstanding) {
+		System.out.println("name: " + _name);
+		System.out.println("amount: " + outstanding);		
 	}
 
     void printOwing() {
@@ -31,8 +36,7 @@ public class Customer {
 			outstanding += each.getAmount();
 		}
 
-		// 明細の印刷
-		System.out.println("name: " + _name);
-		System.out.println("amount: " + outstanding);
+		printDetails(outstanding);
+
     }
 }
