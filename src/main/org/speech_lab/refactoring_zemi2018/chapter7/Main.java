@@ -1,4 +1,5 @@
 package org.speech_lab.refactoring_zemi2018.chapter7;
+import java.util.Date;
 
 public class Main {
     public static void main(String[] args){
@@ -20,6 +21,11 @@ public class Main {
 	Department speechLab = new Department(manager);
 	morimoto.setDepartment(speechLab);
 	System.out.println(morimoto.getDepartment().getManager().getName());
+
+	System.out.println("");
+	Date today = new Date();
+	Date tomorrow = new Date(today.getYear(), today.getMonth(), today.getDate() + 1);
+	System.out.println(tomorrow.getYear() + "年" + tomorrow.getMonth() + "月" + tomorrow.getDate() + "日");
        
 	    
 	// Department department = new Department(manager);
