@@ -6,9 +6,10 @@ public class Account {
     private int _daysOverdrawn;
     private double _interestRate;
 
-    public Account(AccountType arg, int daysOverdrawn){
+    public Account(AccountType arg, int daysOverdrawn, double interestRate){
 	_type = arg;
 	_daysOverdrawn = daysOverdrawn;
+	_interestRate = interestRate;
     }
     
     double overdraftCharge(){

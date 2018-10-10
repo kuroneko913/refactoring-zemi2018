@@ -4,6 +4,7 @@ public class Person {
     private String _name;
     private String _officeAreaCode;
     private String _officeNumber;
+    private Department _department;
 
     public Person(String name, String officeAreaCode, String officeNumber){
 	_name = name;
@@ -34,6 +35,14 @@ public class Person {
 
     void setOfficeNumber(String arg){
 	_officeNumber = arg;
+    }
+
+    public Department getDepartment(){
+	return _department;
+    }
+
+    public void setDepartment(Department arg){
+	_department = arg;
     }
     
 }
