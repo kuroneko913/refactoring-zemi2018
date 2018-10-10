@@ -6,10 +6,8 @@ public class Person {
     private String _officeNumber;
     private Department _department;
 
-    public Person(String name, String officeAreaCode, String officeNumber){
+    public Person(String name){
 	_name = name;
-	_officeAreaCode = officeAreaCode;
-	_officeNumber = officeNumber;
     }
 
     
@@ -25,7 +23,7 @@ public class Person {
 	return _officeAreaCode;
     }
 
-    void setOfficeaAreaCode(String arg){
+    void setOfficeAreaCode(String arg){
 	_officeAreaCode = arg;
     }
 
