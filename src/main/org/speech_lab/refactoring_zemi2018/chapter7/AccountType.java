@@ -4,11 +4,11 @@ class AccountType {
     private boolean _isPremium;
 
     public AccountType(boolean arg){
-	_isPremium = arg;
+        _isPremium = arg;
     }
     
     public boolean isPremium(){
-	return _isPremium;
+        return _isPremium;
     }
 	
 }

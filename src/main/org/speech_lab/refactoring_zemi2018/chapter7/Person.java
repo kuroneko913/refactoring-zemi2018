@@ -7,40 +7,39 @@ public class Person {
     private Department _department;
 
     public Person(String name){
-	_name = name;
+        _name = name;
     }
 
     
     public String getName(){
-	return _name;
+        return _name;
     }
     
     public String getTelephoneNumber(){
-	return ("(" + _officeAreaCode + ")" + _officeNumber);
+        return ("(" + _officeAreaCode + ")" + _officeNumber);
     }
     
     String getOfficeAreaCode(){
-	return _officeAreaCode;
+        return _officeAreaCode;
     }
 
     void setOfficeAreaCode(String arg){
-	_officeAreaCode = arg;
+        _officeAreaCode = arg;
     }
 
     String getOfficeNumber(){
-	return _officeNumber;
+        return _officeNumber;
     }
 
     void setOfficeNumber(String arg){
-	_officeNumber = arg;
+        _officeNumber = arg;
     }
 
     public Department getDepartment(){
-	return _department;
+        return _department;
     }
 
     public void setDepartment(Department arg){
-	_department = arg;
+        _department = arg;
     }
-    
 }
