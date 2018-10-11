@@ -12,17 +12,8 @@ public class Account {
         _interestRate = interestRate;
     }
     
-    double overdraftCharge(){
-        if (_type.isPremium()){
-            double result = 10;
-            if (_daysOverdrawn > 7){
-                result += (_daysOverdrawn -7) * 0.85;
-            }
-            return result;
-        }
-        else{
-            return _daysOverdrawn * 1.75;
-        }
+    double overdraftCharge() {
+        return _type.overdraftCharge(_daysOverdrawn);
     }
 
     double bankCharge(){
