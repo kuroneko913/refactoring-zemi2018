@@ -24,8 +24,8 @@ public class Main {
         System.out.println(morimoto.getManager().getName());
 
         System.out.println("");
-        Date today = new Date();
-        Date tomorrow = nextDay(today);
+        MfDateSub today = new MfDateSub();
+        Date tomorrow = today.nextDay();
         System.out.println(tomorrow.getYear() + "年" + tomorrow.getMonth() + "月" + tomorrow.getDate() + "日");
        
 	    
