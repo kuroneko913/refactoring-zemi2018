@@ -2,8 +2,6 @@ package org.speech_lab.refactoring_zemi2018.chapter7;
 
 public class Person {
     private String _name;
-    private String _officeAreaCode;
-    private String _officeNumber;
     private Department _department;
     private TelephoneNumber _telephoneNumber;
 
