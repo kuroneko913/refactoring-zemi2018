@@ -2,6 +2,7 @@ package org.speech_lab.refactoring_zemi2018.chapter7;
 
 class AccountType {
     private boolean _isPremium;
+    private double _interestRate;
 
     public AccountType(boolean arg){
         _isPremium = arg;
@@ -22,5 +23,13 @@ class AccountType {
         else{
             return account.getDaysOverdrawn() * 1.75;
         }
+    }
+
+    double getInterestRate() {
+        return _interestRate;
+    }
+
+    void setInterestRate(double interestRate) {
+        _interestRate = interestRate;
     }
 }
