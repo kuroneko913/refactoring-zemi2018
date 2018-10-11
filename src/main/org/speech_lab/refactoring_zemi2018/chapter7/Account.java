@@ -15,12 +15,16 @@ public class Account {
     double bankCharge(){
         double result = 4.5;
         if (_daysOverdrawn > 0){
-            result += _type.overdraftCharge(_daysOverdrawn);
+            result += _type.overdraftCharge(this);
         }
         return result;
     }
 
     double interestForAmount_days(double amount, int days){
         return _interestRate * amount * days / 365;
+    }
+
+    int getDaysOverdrawn() {
+        return _daysOverdrawn;
     }
 }
