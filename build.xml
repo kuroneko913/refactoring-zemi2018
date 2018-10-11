@@ -4,12 +4,12 @@
   <property name="cls_dir" value="class" />
   <property name="src_dir" value="src/main" />
   <property name="test_dir" value="src/test" />
-  <property name="Main" value="Main" />
+  <property name="Main" value="ExtractMethod" />
 
   <!-- パッケージ名 -->
-  <property name="package" value="org.speech_lab.refactoring_zemi2018.chapter1" />
+  <property name="package" value="org.speech_lab.refactoring_zemi2018.chapter6" />
 
-  <property name="test_classname" value="${package}.CustomerTest" />
+  <property name="test_classname" value="${package}.ExtractMethodTest" />
   <path id="classpath">
     <pathelement path="${cls_dir}"/>
     <pathelement location="lib/junit-4.10.jar"/>

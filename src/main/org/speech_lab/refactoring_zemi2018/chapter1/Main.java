@@ -11,7 +11,7 @@ class Main {
     Movie shinchan = new Movie("クレヨンしんちゃん", 2);
     Movie precure = new Movie("プリキュア", 2);
 
-    Customer foo = new Customer("foo");
+    Customer foo = new Customer("櫻岡 響");
     foo.addRental(new Rental(starwars, 1));
     foo.addRental(new Rental(harawata, 3));
     foo.addRental(new Rental(kametome, 4));
