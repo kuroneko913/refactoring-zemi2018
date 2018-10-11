@@ -5,9 +5,11 @@ public class Person {
     private String _officeAreaCode;
     private String _officeNumber;
     private Department _department;
+    private TelephoneNumber _telephoneNumber;
 
     public Person(String name){
         _name = name;
+        _telephoneNumber = new TelephoneNumber();
     }
 
     
@@ -16,23 +18,23 @@ public class Person {
     }
     
     public String getTelephoneNumber(){
-        return ("(" + _officeAreaCode + ")" + _officeNumber);
+        return ("(" + getOfficeAreaCode() + ")" + getOfficeNumber());
     }
     
     String getOfficeAreaCode(){
-        return _officeAreaCode;
+        return _telephoneNumber.getOfficeAreaCode();
     }
 
     void setOfficeAreaCode(String arg){
-        _officeAreaCode = arg;
+        _telephoneNumber.setOfficeAreaCode(arg);
     }
 
     String getOfficeNumber(){
-        return _officeNumber;
+        return _telephoneNumber.getOfficeNumber();
     }
 
     void setOfficeNumber(String arg){
-        _officeNumber = arg;
+        _telephoneNumber.setOfficeNumber(arg);
     }
 
     public Department getDepartment(){
