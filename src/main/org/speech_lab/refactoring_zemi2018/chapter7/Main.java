@@ -25,7 +25,7 @@ public class Main {
 
         System.out.println("");
         Date today = new Date();
-        Date tomorrow = new Date(today.getYear(), today.getMonth(), today.getDate() + 1);
+        Date tomorrow = nextDay(today);
         System.out.println(tomorrow.getYear() + "年" + tomorrow.getMonth() + "月" + tomorrow.getDate() + "日");
        
 	    
@@ -33,5 +33,7 @@ public class Main {
         // System.out.println(morimoto.getDepartment().getManager());
     }
 
-    
+    private static Date nextDay(Date arg) {
+        return new Date(arg.getYear(), arg.getMonth(), arg.getDate()+1);
+    }
 }
