@@ -21,7 +21,7 @@ public class Main {
         Person manager = new Person("森");
         Department speechLab = new Department(manager);
         morimoto.setDepartment(speechLab);
-        System.out.println(morimoto.getDepartment().getManager().getName());
+        System.out.println(morimoto.getManager().getName());
 
         System.out.println("");
         Date today = new Date();

@@ -35,6 +35,10 @@ public class Person {
         _telephoneNumber.setOfficeNumber(arg);
     }
 
+    Person getManager() {
+        return _department.getManager();
+    }
+
     public Department getDepartment(){
         return _department;
     }
