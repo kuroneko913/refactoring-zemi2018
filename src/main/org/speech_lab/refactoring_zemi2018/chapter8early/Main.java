@@ -19,6 +19,7 @@ public class Main {
         System.out.println();
         
         /* --- オブジェクトによるデータの置き換え & 値から参照への変更 --- */
+        Customer.loadCustomer();
         List<Order> orders = new ArrayList<Order>();
         orders.add(new Order("直人"));
         orders.add(new Order("一平"));

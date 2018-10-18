@@ -9,7 +9,7 @@ class Customer {
     private static Dictionary _instances = new Hashtable();
 
     public static Customer create(String name) {
-        return new Customer(name);
+        return (Customer) _instances.get(name);
     }
     
     private Customer(String name) {
@@ -18,5 +18,15 @@ class Customer {
 
     public String getName() {
         return _name;
+    }
+
+    static void loadCustomer() {
+        new Customer("直人").store();
+        new Customer("一平").store();
+        new Customer("ゆか").store();
+    }
+
+    private void store() {
+        _instances.put(this.getName(), this);
     }
 }
