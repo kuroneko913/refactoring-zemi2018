@@ -5,6 +5,10 @@ class IntRange {
     private int _low, _high;
 
     IntRange(int low, int high) {
+        initialize(low, high);
+    }
+
+    private void initialize(int low, int high) {
         _low = low;
         _high = high;
     }
