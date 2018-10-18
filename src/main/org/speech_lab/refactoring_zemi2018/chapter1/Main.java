@@ -17,6 +17,6 @@ class Main {
     foo.addRental(new Rental(kametome, 4));
     foo.addRental(new Rental(precure, 1));
 
-    System.out.println(foo.htmlStatement());
+    System.out.println(foo.statement());
   }
 }
