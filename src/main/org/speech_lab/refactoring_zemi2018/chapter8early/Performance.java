@@ -11,5 +11,11 @@ class Performance {
         _data[0] = arg;
     }
 
+    public int getWins() {
+        return Integer.parseInt(_data[1]);
+    }
 
+    public void setWins(String arg) {
+        _data[1] = arg;
+    }
 }
