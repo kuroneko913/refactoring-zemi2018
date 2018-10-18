@@ -14,9 +14,33 @@ public class IntervalWindow extends Frame implements Observer {
 
     private Interval _subject;
 
-    TextField _startField;
-    TextField _endField;
-    TextField _lengthField;
+    private TextField _startField;
+    private TextField _endField;
+    private TextField _lengthField;
+
+    public String getStart() {
+        return _startField.getText();
+    }
+
+    public void setStart(String arg) {
+        _startField.setText(arg);
+    }
+
+    public String getEnd() {
+        return _endField.getText();
+    }
+
+    public void setEnd(String arg) {
+        _endField.setText(arg);
+    }
+
+    public String getLength() {
+        return _lengthField.getText();
+    }
+
+    public void setLength(String arg) {
+        _lengthField.setText(arg);
+    }
 
     public IntervalWindow() {
         super("Interval Window");
@@ -35,7 +59,7 @@ public class IntervalWindow extends Frame implements Observer {
 
         pack();
         show();
-
+        
         _subject = new Interval();
         _subject.addObserver(this);
         update(_subject, null);
@@ -58,32 +82,32 @@ public class IntervalWindow extends Frame implements Observer {
     }
 
     void StartField_FocusLost(FocusEvent event) {
-        if (_startField.getText().isEmpty()) {
-            _startField.setText("0");
+        if (getStart().isEmpty()) {
+            setStart("0");
         }
         calculateLength();
     }
 
     void EndField_FocusLost(FocusEvent event) {
-        if (_endField.getText().isEmpty()) {
-            _endField.setText("0");
+        if (getEnd().isEmpty()) {
+            setEnd("0");
         }
         calculateLength();
     }
 
     void LengthField_FocusLost(FocusEvent event) {
-        if (_lengthField.getText().isEmpty()) {
-            _lengthField.setText("0");
+        if (getLength().isEmpty()) {
+            setLength("0");
         }
         calculateEnd();
     }
 
     void calculateLength() {
         try {
-            int start = Integer.parseInt(_startField.getText());
-            int end = Integer.parseInt(_endField.getText());
+            int start = Integer.parseInt(getStart());
+            int end = Integer.parseInt(getEnd());
             int length = end - start;
-            _lengthField.setText(String.valueOf(length));
+            setLength(String.valueOf(length));
         } catch (NumberFormatException e) {
             throw new RuntimeException("予期しない数字形式のエラー");
         }
@@ -91,10 +115,10 @@ public class IntervalWindow extends Frame implements Observer {
 
     void calculateEnd() {
         try {
-            int start = Integer.parseInt(_startField.getText());
-            int length = Integer.parseInt(_lengthField.getText());
+            int start = Integer.parseInt(getStart());
+            int length = Integer.parseInt(getLength());
             int end = start + length;
-            _endField.setText(String.valueOf(end));
+            setEnd(String.valueOf(end));
         } catch (NumberFormatException e) {
             throw new RuntimeException("予期しない数字形式のエラー");
         }
