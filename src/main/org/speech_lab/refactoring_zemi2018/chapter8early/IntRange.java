@@ -26,10 +26,10 @@ class IntRange {
     }
 
     boolean includes(int arg) {
-        return arg >= _low && arg <= _high;
+        return arg >= getLow() && arg <= getHigh();
     }
 
     void grow(int factor) {
-        _high = _high * factor;
+        setHigh(getHigh() * factor);
     }
 }
