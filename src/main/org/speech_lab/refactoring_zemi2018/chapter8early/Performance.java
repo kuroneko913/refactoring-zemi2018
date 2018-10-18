@@ -7,7 +7,9 @@ class Performance {
         return _data[0];
     }
 
-    public String setName(String arg) {
+    public void setName(String arg) {
         _data[0] = arg;
     }
+
+
 }
