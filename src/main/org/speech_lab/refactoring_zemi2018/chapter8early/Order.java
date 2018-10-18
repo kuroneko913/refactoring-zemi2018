@@ -4,7 +4,7 @@ class Order {
     private Customer _customer;
     
     public Order(String customerName) {
-        _customer = new Customer(customerName);
+        _customer = Customer.create(customerName);
     }
 
     public String getCustomerName() {
@@ -12,6 +12,6 @@ class Order {
     }
 
     public void setCustomer(String customerName) {
-        _customer = new Customer(customerName);
+        _customer = Customer.create(customerName);
     }
 }
