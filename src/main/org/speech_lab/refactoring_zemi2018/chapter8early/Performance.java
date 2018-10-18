@@ -1,7 +1,6 @@
 package org.speech_lab.refactoring_zemi2018.chapter8early;
 
 class Performance {
-    private String[] _data = new String[2];
     private String _name;
     private String _wins;
 
