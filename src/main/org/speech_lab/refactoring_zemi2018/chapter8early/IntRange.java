@@ -9,6 +9,22 @@ class IntRange {
         _high = high;
     }
 
+    void setLow(int arg) {
+        _low = arg;
+    }
+
+    void setHigh(int arg) {
+        _high = arg;
+    }
+
+    int getLow() {
+        return _low;
+    }
+
+    int getHigh() {
+        return _high;
+    }
+
     boolean includes(int arg) {
         return arg >= _low && arg <= _high;
     }
