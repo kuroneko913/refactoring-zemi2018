@@ -1,13 +1,18 @@
 package org.speech_lab.refactoring_zemi2018.chapter8early;
 
+import java.util.Observer;
+import java.util.Observable;
+
 import java.awt.Frame;
 import java.awt.TextField;
 import java.awt.BorderLayout;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusAdapter;
 
-public class IntervalWindow extends Frame {
+public class IntervalWindow extends Frame implements Observer {
     private static final int MAXLEN = 10;
+
+    private Interval _subject;
 
     TextField _startField;
     TextField _endField;
@@ -30,6 +35,13 @@ public class IntervalWindow extends Frame {
 
         pack();
         show();
+
+        _subject = new Interval();
+        _subject.addObserver(this);
+        update(_subject, null);
+    }
+
+    public void update(Observable observed, Object arg) {
     }
 
     class SymFocus extends FocusAdapter {
