@@ -32,10 +32,10 @@ public class Main {
         
         /* --- オブジェクトによる配列の置き換え  --- */
         Performance row = new Performance();
-        row._data[0] = "Liverpool";
+        row.setName("Liverpool");
         row._data[1] = "15";
 
-        String name = row._data[0];
+        String name = row.getName();
         int wins = Integer.parseInt(row._data[1]);
 
         System.out.println(name + " は " + wins + " 勝した");
