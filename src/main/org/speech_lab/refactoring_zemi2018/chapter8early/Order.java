@@ -3,15 +3,15 @@ package org.speech_lab.refactoring_zemi2018.chapter8early;
 class Order {
     private Customer _customer;
     
-    public Order(String customer) {
-        _customer = new Customer(customer);
+    public Order(String customerName) {
+        _customer = new Customer(customerName);
     }
 
-    public String getCustomer() {
+    public String getCustomerName() {
         return _customer.getName();
     }
 
-    public void setCustomer(String customer) {
-        _customer = new Customer(customer);
+    public void setCustomer(String customerName) {
+        _customer = new Customer(customerName);
     }
 }

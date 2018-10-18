@@ -10,7 +10,7 @@ class OrderHistory {
 
         while (iter.hasNext()) {
             Order each = (Order) iter.next();
-            if (each.getCustomer().equals(customer)) {
+            if (each.getCustomerName().equals(customer)) {
                 result++;
             }
         }
