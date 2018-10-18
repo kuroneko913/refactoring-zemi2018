@@ -27,11 +27,11 @@ public class IntervalWindow extends Frame implements Observer {
     }
 
     public String getEnd() {
-        return _endField.getText();
+        return _subject.getEnd();
     }
 
     public void setEnd(String arg) {
-        _endField.setText(arg);
+        _subject.setEnd(arg);
     }
 
     public String getLength() {
@@ -66,6 +66,7 @@ public class IntervalWindow extends Frame implements Observer {
     }
 
     public void update(Observable observed, Object arg) {
+        _endField.setText(_subject.getEnd());
     }
 
     class SymFocus extends FocusAdapter {
