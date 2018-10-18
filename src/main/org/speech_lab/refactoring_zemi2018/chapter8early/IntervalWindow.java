@@ -82,6 +82,7 @@ public class IntervalWindow extends Frame implements Observer {
     }
 
     void StartField_FocusLost(FocusEvent event) {
+        setStart(_startField.getText());
         if (getStart().isEmpty()) {
             setStart("0");
         }
@@ -89,6 +90,7 @@ public class IntervalWindow extends Frame implements Observer {
     }
 
     void EndField_FocusLost(FocusEvent event) {
+        setEnd(_endField.getText());
         if (getEnd().isEmpty()) {
             setEnd("0");
         }
@@ -96,6 +98,7 @@ public class IntervalWindow extends Frame implements Observer {
     }
 
     void LengthField_FocusLost(FocusEvent event) {
+        setLength(_lengthField.getText());
         if (getLength().isEmpty()) {
             setLength("0");
         }
