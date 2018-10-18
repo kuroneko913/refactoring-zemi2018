@@ -31,12 +31,12 @@ public class Main {
         System.out.println();
         
         /* --- オブジェクトによる配列の置き換え  --- */
-        String[] row = new String[2];
-        row[0] = "Liverpool";
-        row[1] = "15";
+        Performance row = new Performance();
+        row._data[0] = "Liverpool";
+        row._data[1] = "15";
 
-        String name = row[0];
-        int wins = Integer.parseInt(row[1]);
+        String name = row._data[0];
+        int wins = Integer.parseInt(row._data[1]);
 
         System.out.println(name + " は " + wins + " 勝した");
 
