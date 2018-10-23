@@ -19,11 +19,11 @@ public class IntervalWindow extends Frame implements Observer {
     private TextField _lengthField;
 
     public String getStart() {
-        return _startField.getText();
+        return _subject.getStart();
     }
 
     public void setStart(String arg) {
-        _startField.setText(arg);
+        _subject.setStart(arg);
     }
 
     public String getEnd() {
@@ -35,11 +35,11 @@ public class IntervalWindow extends Frame implements Observer {
     }
 
     public String getLength() {
-        return _lengthField.getText();
+        return _subject.getLength();
     }
 
     public void setLength(String arg) {
-        _lengthField.setText(arg);
+        _subject.setLength(arg);
     }
 
     public IntervalWindow() {
@@ -66,7 +66,9 @@ public class IntervalWindow extends Frame implements Observer {
     }
 
     public void update(Observable observed, Object arg) {
+        _startField.setText(_subject.getStart());
         _endField.setText(_subject.getEnd());
+        _lengthField.setText(_subject.getLength());
     }
 
     class SymFocus extends FocusAdapter {
@@ -87,7 +89,7 @@ public class IntervalWindow extends Frame implements Observer {
         if (getStart().isEmpty()) {
             setStart("0");
         }
-        calculateLength();
+        _subject.calculateLength();
     }
 
     void EndField_FocusLost(FocusEvent event) {
@@ -95,7 +97,7 @@ public class IntervalWindow extends Frame implements Observer {
         if (getEnd().isEmpty()) {
             setEnd("0");
         }
-        calculateLength();
+        _subject.calculateLength();
     }
 
     void LengthField_FocusLost(FocusEvent event) {
@@ -103,28 +105,6 @@ public class IntervalWindow extends Frame implements Observer {
         if (getLength().isEmpty()) {
             setLength("0");
         }
-        calculateEnd();
+        _subject.calculateEnd();
     }
-
-    void calculateLength() {
-        try {
-            int start = Integer.parseInt(getStart());
-            int end = Integer.parseInt(getEnd());
-            int length = end - start;
-            setLength(String.valueOf(length));
-        } catch (NumberFormatException e) {
-            throw new RuntimeException("予期しない数字形式のエラー");
-        }
-    }
-
-    void calculateEnd() {
-        try {
-            int start = Integer.parseInt(getStart());
-            int length = Integer.parseInt(getLength());
-            int end = start + length;
-            setEnd(String.valueOf(end));
-        } catch (NumberFormatException e) {
-            throw new RuntimeException("予期しない数字形式のエラー");
-        }
-    }    
 }
