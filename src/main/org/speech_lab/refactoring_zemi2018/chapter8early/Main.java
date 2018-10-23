@@ -41,6 +41,6 @@ public class Main {
         System.out.println(name + " は " + wins + " 勝した");
 
         /* --- 観察されるデータの複製 --- */
-        IntervalWindow window = new IntervalWindow();
+        // IntervalWindow window = new IntervalWindow();
     }
 }
