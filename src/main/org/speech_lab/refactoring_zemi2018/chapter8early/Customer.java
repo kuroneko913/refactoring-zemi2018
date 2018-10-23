@@ -1,12 +1,13 @@
 package org.speech_lab.refactoring_zemi2018.chapter8early;
 
-import java.util.Dictionary;
-import java.util.Hashtable;
+import java.util.Map;
+import java.util.HashMap;
 
 class Customer {
 
     private final String _name;
-    private static Dictionary _instances = new Hashtable();
+    private static Map<String, Customer> _instances =
+        new HashMap<String, Customer>();
 
     public static Customer create(String name) {
         return (Customer) _instances.get(name);
