@@ -7,7 +7,7 @@
   <property name="Main" value="Main" />
 
   <!-- パッケージ名 -->
-  <property name="package" value="org.speech_lab.refactoring_zemi2018.chapter8early" />
+  <property name="package" value="org.speech_lab.refactoring_zemi2018.chapter8later" />
 
   <property name="test_classname" value="${package}.MainTest" />
   <path id="classpath">
