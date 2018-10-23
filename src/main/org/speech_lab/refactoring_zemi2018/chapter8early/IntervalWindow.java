@@ -58,7 +58,7 @@ public class IntervalWindow extends Frame implements Observer {
         add(_lengthField, BorderLayout.SOUTH);
 
         pack();
-        show();
+        setVisible(true);
         
         _subject = new Interval();
         _subject.addObserver(this);
