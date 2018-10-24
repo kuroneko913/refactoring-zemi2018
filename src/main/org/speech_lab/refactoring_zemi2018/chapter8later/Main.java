@@ -56,8 +56,8 @@ class Main {
         System.out.println("昇進した耕作の給料は" + kousaku.payAmount() + "ドル\n");
 
         /* --- フィールドによるサブクラスの置き換え --- */
-        Female rin = new Female();
-        Male ren = new Male();
+        User rin = new Female();
+        User ren = new Male();
         System.out.println("リン: " + rin.getCode());
         System.out.println("レン: " + ren.getCode());
     }
