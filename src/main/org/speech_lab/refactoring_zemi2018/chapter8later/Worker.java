@@ -1,15 +1,19 @@
 package org.speech_lab.refactoring_zemi2018.chapter8later;
 
-class Worker {
+public class Worker {
     private int _type;
 
     private final int _monthlySalary = 1500;
     private final int _comission = 300;
     private final int _bonus = 500;
     
-    static final int ENGINEER = 0;
-    static final int SALESMAN = 1;
-    static final int MANAGER = 2;
+    public static final int ENGINEER = 0;
+    public static final int SALESMAN = 1;
+    public static final int MANAGER = 2;
+
+    public Worker() {
+        super();
+    }
 
     public Worker(int type) {
         _type = type;
