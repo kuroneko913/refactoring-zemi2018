@@ -14,25 +14,25 @@ class Main {
                            "が商品を注文しました\n");
 
         /* --- コレクションのカプセル化 --- */
-        Person<Course> kent = new Person<Course>();
+        Person kent = new Person();
         Set<Course> s = new HashSet<Course>();
 
         s.add(new Course("線形代数", false));
         s.add(new Course("機械学習", true));
-        kent.setCourses(s);
+        kent.initializeCourses(s);
 
         Course refact = new Course("リファクタリング", true);
-        kent.getCourses().add(refact);
-        kent.getCourses().add(new Course("プログラミングの基礎", false));
-        kent.getCourses().remove(refact);
+        kent.addCourse(refact);
+        kent.addCourse(new Course("プログラミングの基礎", false));
+        kent.removeCourse(refact);
 
         System.out.println("応用コースを" + kent.countAdvancedCourses() +
                            "個受講しています\n");
 
         /* --- クラスによるタイプコードの置き換え --- */
-        Item book = new Item(Item.TYPECODE_BOOK, "やさしいJava", 2600);
-        Item dvd = new Item(Item.TYPECODE_DVD, "劇場版アイカツ! 超豪華版", 12000);
-        Item soft = new Item(Item.TYPECODE_SOFT, "腐り姫", 8800);
+        Item book = new Item(ItemType.BOOK, "やさしいJava", 2600);
+        Item dvd = new Item(ItemType.DVD, "劇場版アイカツ! 超豪華版", 12000);
+        Item soft = new Item(ItemType.SOFT, "腐り姫", 8800);
 
         System.out.println("BOOK = " + book.toString());
         System.out.println("DVD  = " + dvd.toString());
@@ -40,9 +40,9 @@ class Main {
         System.out.println();
 
         /* --- サブクラスによるタイプコードの置き換え --- */
-        Employee kousiro = new Employee(Employee.ENGINEER);
-        Employee daitoku = new Employee(Employee.SALESMAN);
-        Employee senomiya = new Employee(Employee.MANAGER);
+        Employee kousiro = Employee.create(Employee.ENGINEER);
+        Employee daitoku = Employee.create(Employee.SALESMAN);
+        Employee senomiya = Employee.create(Employee.MANAGER);
 
         System.out.println("神代: " + kousiro.getCategory());
         System.out.println("大徳: " + daitoku.getCategory());

@@ -1,0 +1,36 @@
+package org.speech_lab.refactoring_zemi2018.chapter8later;
+
+public class ItemType
+{
+    public static final ItemType Book = new ItemType(0);
+    public static final ItemType DVD = new ItemType(1);
+    public static final ItemType SOFT = new ItemType(2);
+
+    private int _typecode;
+
+    public ItemType(int typecode)
+    {
+	_typecode = typecode;
+    }
+
+    public int getTypeCode()
+    {
+	return _typecode;
+    }
+
+    public static ItemType getItemType(int typecode)
+    {
+	switch (typecode)
+	    {
+	    case 0:
+		return BOOK;
+	    case 1:
+		return DVD;
+	    case 2:
+		return SOFT;
+	    default:
+		return null;
+	    }
+    }
+
+}
