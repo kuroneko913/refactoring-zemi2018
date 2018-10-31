@@ -24,7 +24,23 @@ public class Main
 	System.out.println("中谷さんの給料は: " + nakaya.payAmount() + "ドル");
 	nakaya.setType(Employee.MANAGER);
 	System.out.println("昇進した中谷さんの給料は: " + nakaya.payAmount() + "ドル");
-	
-	
+	/* ヌルオブジェクトの導入 */
+	Student gishi = new Student("高岸", 3.5);
+        Laboratory moriLab = new Laboratory("森研究室");
+        moriLab.registerStudent(gishi);
+
+        String targetName = "森本";
+        Student student = moriLab.getStudent(targetName);
+
+        // ここからのifをなんとかしたい！
+        Double gpa;
+        if(student == null){
+            gpa = Student.DEFAULT_GPA;
+        } else {
+            gpa = student.getGPA();
+        }
+        // ここまで
+
+        System.out.println(targetName + "さんのGPA: " + gpa.toString());
     }
 }
