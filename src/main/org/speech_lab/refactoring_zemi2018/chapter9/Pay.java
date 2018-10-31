@@ -1,4 +1,4 @@
-package chapter9;
+package org.speech_lab.refactoring_zemi2018.chapter9;
 
 class Pay
 {

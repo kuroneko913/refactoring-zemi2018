@@ -1,8 +1,8 @@
-package chapter9;
+package org.speech_lab.refactoring_zemi2018.chapter9;
 
-import chapter9.employee.Engineer;
-import chapter9.employee.Salesman;
-import chapter9.employee.Manager;
+import org.speech_lab.refactoring_zemi2018.chapter9.employee.Engineer;
+import org.speech_lab.refactoring_zemi2018.chapter9.employee.Salesman;
+import org.speech_lab.refactoring_zemi2018.chapter9.employee.Manager;
 
 public class Employee {
     private EmployeeType _type;

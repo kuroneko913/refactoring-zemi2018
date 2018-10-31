@@ -1,4 +1,4 @@
-package chapter9;
+package org.speech_lab.refactoring_zemi2018.chapter9;
 
 import java.io.*;
 
@@ -7,9 +7,9 @@ public class Main
     public static void main(String[] args)
     {
 	/* 条件記述の分解 */
-	SeasonCharge season = new SeasonCharge(300.0,"2018/09/02");
+	SeasonCharge season = new SeasonCharge(3.0,"2018/09/02");
 	System.out.println(season.getDate());
-	System.out.println("プール使用料金 "+season.getCharge()+"ドル");
+	System.out.println("プール使用料金: "+season.getCharge()+"ドル");
 
 	/* 条件記述の統合 */
 	Disability disability = new Disability(3,3,false);
@@ -17,7 +17,7 @@ public class Main
 
 	/* ガード節による入れ子条件記述の置き換え */
 	Pay pay = new Pay(false,false,false);
-	System.out.println("給料: "+pay.getPayAmount()+"ドル");
+	System.out.println("森本さんの給料は: "+pay.getPayAmount()+"ドル");
 
 	/* ポリモーフィズムによる条件記述の置き換え */
 	Employee nakaya = new Employee(Employee.SALESMAN);

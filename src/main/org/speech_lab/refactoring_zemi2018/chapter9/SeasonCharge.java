@@ -1,4 +1,4 @@
-package chapter9;
+package org.speech_lab.refactoring_zemi2018.chapter9;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -12,7 +12,7 @@ class SeasonCharge
     private double charge;
     private int _summerRate = 3;
     private int _winterRate = 2;
-    private int _winterServiceCharge = 200;
+    private int _winterServiceCharge = 2;
 
     public static Date toDate(String str) {
         // 日付フォーマットを作成

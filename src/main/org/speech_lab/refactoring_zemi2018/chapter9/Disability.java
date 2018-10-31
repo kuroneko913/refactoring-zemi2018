@@ -1,4 +1,4 @@
-package chapter9;
+package org.speech_lab.refactoring_zemi2018.chapter9;
 
 class Disability
 {
@@ -23,7 +23,7 @@ class Disability
 	if (_isPartTime) return 0;
 	//傷病給付金を計算する
 	else
-	    disabilityamount = 20000;
+	    disabilityamount = 200;
 	return disabilityamount;
     }
     //--------------------------

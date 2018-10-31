@@ -1,7 +1,7 @@
-package chapter9.employee;
+package org.speech_lab.refactoring_zemi2018.chapter9.employee;
 
-import chapter9.Employee;
-import chapter9.EmployeeType;
+import org.speech_lab.refactoring_zemi2018.chapter9.Employee;
+import org.speech_lab.refactoring_zemi2018.chapter9.EmployeeType;
 
 public class Engineer extends EmployeeType{
     @Override
