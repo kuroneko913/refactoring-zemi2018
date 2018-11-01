@@ -31,12 +31,14 @@ public class Main
         Student student = moriLab.getStudent(targetName);
 
         // ここからのifをなんとかしたい！
-        Double gpa;
-        if(student == null){
-            gpa = Student.DEFAULT_GPA;
-        } else {
-            gpa = student.getGPA();
-        }
+        // Double gpa;
+        // if(student == null){
+        //     gpa = Student.getGPA();
+        // } else {
+        //     gpa = student.getGPA();
+        // }
+
+	Double gpa = student.getGPA();
         // ここまで
 
         System.out.println(targetName + "さんのGPA: " + gpa.toString());

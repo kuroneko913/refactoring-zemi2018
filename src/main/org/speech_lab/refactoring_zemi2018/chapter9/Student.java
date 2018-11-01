@@ -7,9 +7,6 @@ class Student {
     private String _name;
     private double _gpa;
 
-    //デフォルトとは？とは考えないことにする
-    public static double DEFAULT_GPA = 2.0;
-
     public Student() {
     }
 
@@ -26,7 +23,7 @@ class Student {
         return _gpa;
     }
 
-    public Boolean isNull() {
-	return false;
-    }
+    // public Boolean isNull() {
+    // 	return false;
+    // }
 }
