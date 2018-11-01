@@ -12,6 +12,10 @@ class Laboratory {
     }
 
     Student getStudent(String studentName){
+	Student student = _students.get(studentName);
+	if (student == null) {
+	    return new NullStudent();
+	}
         return _students.get(studentName);
     }
 

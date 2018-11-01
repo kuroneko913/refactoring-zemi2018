@@ -10,6 +10,9 @@ class Student {
     //デフォルトとは？とは考えないことにする
     public static double DEFAULT_GPA = 2.0;
 
+    public Student() {
+    }
+
     public Student(String name, double gpa){
         _name = name;
         _gpa = gpa;
@@ -21,5 +24,9 @@ class Student {
 
     public double getGPA(){
         return _gpa;
+    }
+
+    public Boolean isNull() {
+	return false;
     }
 }
