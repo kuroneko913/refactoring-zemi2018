@@ -38,11 +38,11 @@ class SeasonCharge
 //-------------------------------------------	
 	if(NotSummer(date))
 	    {
-		charge = getWinterCharge(quantity);
+		charge = winterCharge(quantity);
 	    }
 	else
 	    {
-		charge = getSummerCharge(quantity);
+		charge = summerCharge(quantity);
 	    }
 
 	System.out.println(date);
@@ -51,15 +51,15 @@ class SeasonCharge
     }
 //-------------------------------------------
 
-     Boolean NotSummer(Date _date) {
+     Boolean notSummer(Date _date) {
 	 return (_date.before(SUMMER_START) || _date.after(SUMMER_END));
      }
 
-    double getWinterCharge(double quantity) {
+    double winterCharge(double quantity) {
 	return quantity * _winterRate + _winterServiceCharge;
     }
 
-    double  getSummerCharge(double quantity) {
+    double summerCharge(double quantity) {
 	return quantity * _summerRate;
     }
 }
