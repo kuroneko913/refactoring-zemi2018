@@ -6,14 +6,13 @@ import org.speech_lab.refactoring_zemi2018.chapter9.employee.Manager;
 
 public class Employee {
     private EmployeeType _type;
-
-    private final int _mouthlySalary = 1500;
-    private final int _comission = 300;
-    private final int _bonus = 500;
-
     public static final int ENGINEER = 0;
     public static final int SALESMAN = 1;
     public static final int MANAGER = 2;
+
+    private final int _monthlySalary = 1500;
+    private final int _commission = 300;
+    private final int _bonus = 500;
 
     public Employee(){
 	super();
@@ -32,16 +31,20 @@ public class Employee {
     }
 
     public int payAmount(){
-	switch(getType())
-	    {
-	    case ENGINEER:
-		return _mouthlySalary;
-	    case SALESMAN:
-		return _mouthlySalary + _comission;
-	    case MANAGER:
-		return _mouthlySalary + _bonus;
-	    default:
-		throw new RuntimeException("不正なタイプコード");
-	    }
+	return _type.payAmount(this);
     }
+
+    public int getMonthlySalary() {
+	return _monthlySalary;
+    }
+
+    public int getCommission() {
+	return _commission;
+    }
+
+    public int getBonus() {
+	return _bonus;
+    }
+
+    
 }
