@@ -11,7 +11,7 @@ public abstract class EmployeeType {
 
     
     public abstract int getTypeCode();
-    //public abstract int PayAmount();
+    public abstract int payAmount(Employee emp);
 
     public static EmployeeType newType(int code){
 	switch(code){
@@ -25,19 +25,4 @@ public abstract class EmployeeType {
 	    throw new IllegalArgumentException("不正な従業員コード");
 	}
     }
-
-    public int payAmount(Employee emp){
-	switch(getTypeCode())
-	    {
-	    case ENGINEER:
-		return emp.getMonthlySalary();
-	    case SALESMAN:
-		return emp.getMonthlySalary() + emp.getCommission();
-	    case MANAGER:
-		return emp.getMonthlySalary() + emp.getBonus();
-	    default:
-		throw new RuntimeException("不正なタイプコード");
-	    }
-    }
-   
 }
