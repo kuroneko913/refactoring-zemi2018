@@ -8,8 +8,6 @@ public class Main
     {
 	/* 条件記述の分解 */
 	SeasonCharge season = new SeasonCharge(3.0,"2018/09/02");
-	System.out.println(season.getDate());
-	System.out.println("プール使用料金: "+season.getCharge()+"ドル");
 
 	/* 条件記述の統合 */
 	Disability disability = new Disability(3,3,false);

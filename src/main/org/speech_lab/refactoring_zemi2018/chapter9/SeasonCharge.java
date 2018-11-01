@@ -9,10 +9,14 @@ import java.io.*;
 
 class SeasonCharge
 {
-    private double charge;
     private int _summerRate = 3;
     private int _winterRate = 2;
     private int _winterServiceCharge = 2;
+
+    private Date _today;
+
+    Date SUMMER_START = toDate("2018/06/01");
+    Date SUMMER_END = toDate("2018/08/31");
 
     public static Date toDate(String str) {
         // 日付フォーマットを作成
@@ -26,40 +30,36 @@ class SeasonCharge
         }
     }
 
-    private double _charge;
-    private Date _today;
-
-    Date SUMMER_START = toDate("2018/06/01");
-    Date SUMMER_END = toDate("2018/08/31");
-    
     public SeasonCharge(double quantity, String toDay)
     {
-	
+	double charge;
 	Date date = toDate(toDay);
+	
 //-------------------------------------------	
-	if(date.before(SUMMER_START) || date.after(SUMMER_END))
+	if(NotSummer(date))
 	    {
-		charge = quantity * _winterRate + _winterServiceCharge;
+		charge = getWinterCharge(quantity);
 	    }
 	else
 	    {
-		charge = quantity * _summerRate;
+		charge = getSummerCharge(quantity);
 	    }
-	_today = date;
-	_charge = charge;
+
+	System.out.println(date);
+	System.out.println("プール使用料金: "+charge+"ドル");
+
     }
 //-------------------------------------------
 
-    double getCharge()
-    {
-	return _charge;
+     Boolean NotSummer(Date _date) {
+	 return (_date.before(SUMMER_START) || _date.after(SUMMER_END));
+     }
+
+    double getWinterCharge(double quantity) {
+	return quantity * _winterRate + _winterServiceCharge;
     }
 
-    Date getDate()
-    {
-	return _today;
+    double  getSummerCharge(double quantity) {
+	return quantity * _summerRate;
     }
-
-   
-
 }
