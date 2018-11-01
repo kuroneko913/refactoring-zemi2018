@@ -36,7 +36,7 @@ class SeasonCharge
 	Date date = toDate(toDay);
 	
 //-------------------------------------------	
-	if(NotSummer(date))
+	if(notSummer(date))
 	    {
 		charge = winterCharge(quantity);
 	    }
