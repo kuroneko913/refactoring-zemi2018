@@ -1,19 +1,19 @@
 package org.speech_lab.refactoring_zemi2018.chapter10;
 
 class TempRange {
-	private double _low;
-	private double _high;
+	private int _low;
+	private int _high;
 	
-	public TempRange(double low, double high) {
+	public TempRange(int low, int high) {
 		low = _low;
 		high = _high;
 	}
 
-	public double getLow() {
+	public int getLow() {
 		return _low;
 	}
 
-	public double getHigh() {
+	public int getHigh() {
 		return _high;
 	}
 }

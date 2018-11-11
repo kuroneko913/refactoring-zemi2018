@@ -1,9 +1,9 @@
 package org.speech_lab.refactoring_zemi2018.chapter10;
 
 class Room {
-	private double _low;
-	private double _high;
-	public Room(double low,double high) {
+	private int _low;
+	private int _high;
+	public Room(int low,int high) {
 		_low = low;
 		_high = high;
 	}

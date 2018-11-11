@@ -12,9 +12,10 @@ class Main {
 		/*オブジェクトそのものの受け渡し*/
 		// 暖房計画の温度範囲 
 		TempRange plan_temp_range = new TempRange(5,20);
+		HeatingPlan heatingPlan = new HeatingPlan(plan_temp_range);
 		// 暖房をつけるか考える部屋
 		Room myroom = new Room(7,15);
-		if (myroom.withinPlan(plan_temp_range)) {
+		if (myroom.withinPlan(heatingPlan)) {
 			System.out.println("暖房計画を実施します");
 		}else {
 			System.out.println("暖房計画を実施しません");
