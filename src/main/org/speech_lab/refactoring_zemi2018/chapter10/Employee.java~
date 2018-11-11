@@ -1,0 +1,23 @@
+package org.speech_lab.refactoring_zemi2018.chapter10;
+
+class Employee {
+    private String _name;
+    private Double _salary;
+    
+    public Employee(String name, Double salary) {
+	_name = name;
+	_salary = salary;
+    }
+    
+    void tenpercentRaise() {
+	_salary *= 1.1;
+    }
+
+    void fivepercentRaise() {
+	_salary *= 1.05;
+    }
+
+    public Double getSalary() {
+	return _salary;
+    }
+}
