@@ -11,7 +11,8 @@ class Main {
 		/*明示的なメソッド群によるパラメータの置き換え*/
 		/*オブジェクトそのものの受け渡し*/
 		/*メソッドによるパラメータの置き換え*/
-		
+		Item item = new Item("apple",100,10);
+		System.out.println(item.getName()+":"+item.getPrice());
 		/*パラメータオブジェクトの導入*/
 		/*Factory Methodによるコンストラクタの置き換え*/
 		/*ダウンキャストのカプセル化*/
