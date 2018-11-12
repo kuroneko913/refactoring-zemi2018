@@ -1,24 +1,27 @@
 package org.speech_lab.refactoring_zemi2018.chapter10;
 
-import
+import java.util.Date;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.ArrayList;
 
 class Account {
-	private Vector  _entries = new Vector();
+	private Collection _entries = new ArrayList();
 	
-	public Account(Vector entries) {
+	public Account(Collection entries) {
 		_entries = entries;
 	}
 	double getFlowBetween(Date start, Date end) {
 		double result = 0;
-		Enumeration e = _entries.elements();
-		while (e.hasMoreElements()) {
-			Entry each = (Entry) e.nextElement();
-			if (each.getDate().equals(start) ||
-				each.getDate().equals(end) ||
-					(each.getDate().after(start) && each.getDate().before(end)))
-			   {
-				   result += each.getValue();
-				}
+		Iterator iter = _entries.iterator();
+		while (iter.hasNext()) {
+		    Entry each = (Entry) iter.next();
+		    if (each.getDate().equals(start) ||
+			each.getDate().equals(end) ||
+		       (each.getDate().after(start) && each.getDate().before(end)))
+		       {
+			   result += each.getValue();
+		       }
 			
 		}
 		return result;
