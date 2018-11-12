@@ -12,6 +12,9 @@ class Main {
 		/*オブジェクトそのものの受け渡し*/
 		/*メソッドによるパラメータの置き換え*/
 		/*パラメータオブジェクトの導入*/
+		Date date = new Date();
+		Entry entry = new Entry(19800, date);
+		//Account account = new Account();
 		/*Factory Methodによるコンストラクタの置き換え*/
 		/*ダウンキャストのカプセル化*/
 		/*例外によるエラーコードの置き換え*/
