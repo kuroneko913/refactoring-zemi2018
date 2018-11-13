@@ -13,9 +13,12 @@ class Main {
 		/*メソッドによるパラメータの置き換え*/
 		/*パラメータオブジェクトの導入*/
 		/*Factory Methodによるコンストラクタの置き換え*/
-		Employee engineer = Employee.create(Employee.ENGINEER);
-		Employee salesman = Employee.create(Employee.SALESMAN);
- 		Employee manager = Employee.create(Employee.MANAGER);
+		Employee engineer = new Employee(Employee.ENGINEER);
+		Employee salesman = new Employee(Employee.SALESMAN);
+		Employee manager = new Employee(Employee.MANAGER);
+		// Employee engineer = Employee.create(Employee.ENGINEER);
+		// Employee salesman = Employee.create(Employee.SALESMAN);
+ 		// Employee manager = Employee.create(Employee.MANAGER);
 		
 		/*ダウンキャストのカプセル化*/
 		/*例外によるエラーコードの置き換え*/
