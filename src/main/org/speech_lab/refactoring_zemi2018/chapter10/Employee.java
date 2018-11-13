@@ -11,4 +11,8 @@ class Employee {
 	public Employee(int type) {
 		_type = type;
 	}
+
+	static Employee create(int type) {
+		return new Employee(type);
+	}
 }
