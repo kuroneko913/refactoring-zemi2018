@@ -8,7 +8,7 @@ class Employee {
 
 	private int _type;
 
-	public Employee(int type) {
+	private Employee(int type) {
 		_type = type;
 	}
 
