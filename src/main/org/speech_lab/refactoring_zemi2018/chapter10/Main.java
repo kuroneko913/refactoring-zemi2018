@@ -13,6 +13,10 @@ class Main {
 		/*メソッドによるパラメータの置き換え*/
 		/*パラメータオブジェクトの導入*/
 		/*Factory Methodによるコンストラクタの置き換え*/
+		Employee engineer = new Employee(Employee.ENGINEER);
+		Employee salesman = new Employee(Employee.SALESMAN);
+ 		Employee manager = new Employee(Employee.MANAGER);
+		
 		/*ダウンキャストのカプセル化*/
 		/*例外によるエラーコードの置き換え*/
 		/*条件判定による例外の置き換え*/
