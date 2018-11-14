@@ -13,5 +13,14 @@ class Main {
 		System.out.println("名前: "+yokoyama.getName());
 		System.out.println("電話番号: "+yokoyama.getTelephoneNumber());
 		
+		/*問い合わせと更新の分離*/
+		ArrayList<String>  miscreantList = new ArrayList<String>();
+		miscreantList.add("Don");
+		miscreantList.add("Mike");
+		miscreantList.add("Kent");
+		miscreantList.add("John");
+		
+		SecuritySystem security = new SecuritySystem();
+		security.checkSecurity(miscreantList);
 	}
 }

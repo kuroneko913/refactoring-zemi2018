@@ -28,7 +28,7 @@ class Person {
 	public String getOfficeNumber() {
 		return _telephoneNumber.getOfficeNumber();
 	}
-
+	
 	public String getTelephoneNumber() {
 		return ("(" + getOfficeAreaCode() + ")"+ getOfficeNumber());
 	}
