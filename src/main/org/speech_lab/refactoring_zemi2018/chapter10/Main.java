@@ -1,6 +1,7 @@
 package org.speech_lab.refactoring_zemi2018.chapter10;
 
 import java.util.Date;
+import java.util.List;
 import java.util.ArrayList;
 
 class Main {
@@ -74,6 +75,13 @@ class Main {
 		System.out.println("従業員:"+engineer.getCategory());
 		System.out.println("従業員:"+salesman.getCategory());
 		System.out.println("従業員:"+manager.getCategory());
+		
+		/*例外によるエラーコードの置き換え*/
+		BankAccount myAccount = new BankAccount(15000);
+		if (myAccount.withdraw(20000) == -1) {
+			System.out.println("出金失敗");
+		}
+		System.out.println("出金後の残高:"+myAccount.getBalance()+"円");
 		
 	}
 }
