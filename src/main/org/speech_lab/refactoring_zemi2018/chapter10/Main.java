@@ -20,7 +20,6 @@ class Main {
 		miscreantList.add("Mike");
 		miscreantList.add("Kent");
 		miscreantList.add("John");
-		
 		SecuritySystem security = new SecuritySystem();
 		security.checkSecurity(miscreantList);
 		
@@ -43,6 +42,10 @@ class Main {
 		}else {
 			System.out.println("暖房計画を実施しません");
 		}
-		
+
+		/*メソッドによるパラメータの置き換え*/
+		Item item = new Item("apple",100,10);
+		System.out.println(item.getName()+":"+item.getPrice());
+	  
 	}
 }
