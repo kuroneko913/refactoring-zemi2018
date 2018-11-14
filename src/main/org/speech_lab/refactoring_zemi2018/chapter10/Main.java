@@ -66,5 +66,14 @@ class Main {
 		double flow = account.getFlowBetween(startDate,endDate);
 		System.out.println(startDate.toString()+"~"+endDate.toString());
 		System.out.println("この期間の残高合計は"+flow+"円");
+
+		/*Factory Methodによるコンストラクタの置き換え*/
+		EmployeeType engineer = EmployeeType.create(EmployeeType.ENGINEER);
+		EmployeeType salesman = EmployeeType.create(EmployeeType.SALESMAN);
+ 		EmployeeType manager = EmployeeType.create(EmployeeType.MANAGER);
+		System.out.println("従業員:"+engineer.getCategory());
+		System.out.println("従業員:"+salesman.getCategory());
+		System.out.println("従業員:"+manager.getCategory());
+		
 	}
 }
