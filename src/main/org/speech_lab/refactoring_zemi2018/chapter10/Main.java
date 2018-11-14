@@ -6,6 +6,7 @@ import java.util.ArrayList;
 class Main {
 	public static void main(String[] args) {
 		System.out.println("*** Chapter10 ***");
+
 		/*メソッド名の変更*/
 		Person yokoyama = new Person("横山");
 		yokoyama.setOfficeAreaCode("123");
@@ -30,5 +31,18 @@ class Main {
 		System.out.println(yamada.getName()+"さんの"+"給料は"+yamada.getSalary()+"円");
 		yamada.fivepercentRaise();
 		System.out.println(yamada.getName()+"さんの"+"給料は"+yamada.getSalary()+"円");
+
+		/*オブジェクトそのものの受け渡し*/
+		// 暖房計画の温度範囲 
+		TempRange plan_temp_range = new TempRange(5,20);
+		HeatingPlan heatingPlan = new HeatingPlan(plan_temp_range);
+		// 暖房をつけるか考える部屋
+		Room myroom = new Room(7,15);
+		if (myroom.withinPlan(heatingPlan)) {
+			System.out.println("暖房計画を実施します");
+		}else {
+			System.out.println("暖房計画を実施しません");
+		}
+		
 	}
 }
