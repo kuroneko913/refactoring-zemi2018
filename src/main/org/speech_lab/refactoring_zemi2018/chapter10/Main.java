@@ -22,5 +22,13 @@ class Main {
 		
 		SecuritySystem security = new SecuritySystem();
 		security.checkSecurity(miscreantList);
+		
+		/*メソッドのパラメタライズ*/
+		Employee yamada = new Employee("山田太郎",200000);
+		System.out.println(yamada.getName()+"さんの"+"給料は"+yamada.getSalary()+"円");
+		yamada.tenpercentRaise();
+		System.out.println(yamada.getName()+"さんの"+"給料は"+yamada.getSalary()+"円");
+		yamada.fivepercentRaise();
+		System.out.println(yamada.getName()+"さんの"+"給料は"+yamada.getSalary()+"円");
 	}
 }
